@@ -19,6 +19,159 @@
     lastScrollTop = currentScroll;
   });
 
+// ===== LAZY-LOAD BACKGROUND VIDEO =====
+(() => {
+  const video = document.getElementById('myVideo');
+  if (!video) return;
+
+  // Start loading video after page is interactive
+  const loadVideo = () => {
+    video.autoplay = true;
+    video.load();
+  };
+
+  // Load video when page is ready (after critical resources)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadVideo);
+  } else {
+    loadVideo();
+  }
+
+  // Fallback: load on first scroll or after 2s timeout
+  let videoLoaded = false;
+  const ensureVideoLoad = () => {
+    if (!videoLoaded) {
+      videoLoaded = true;
+      loadVideo();
+      window.removeEventListener('scroll', ensureVideoLoad);
+      clearTimeout(loadTimeout);
+    }
+  };
+  window.addEventListener('scroll', ensureVideoLoad, { once: true });
+  const loadTimeout = setTimeout(ensureVideoLoad, 2000);
+})();
+
+// ===== CONTACT FORM VALIDATION =====
+(() => {
+  const form = document.querySelector('.contact-form-box');
+  if (!form) return;
+
+  const nameInput = form.querySelector('input[placeholder*="Gil Gabunada"]');
+  const emailInput = form.querySelector('input[placeholder*="alex@company.com"]');
+  const messageInput = form.querySelector('textarea');
+  const submitBtn = form.querySelector('.send-btn');
+
+  if (!nameInput || !emailInput || !messageInput || !submitBtn) return;
+
+  const showMessage = (type, text) => {
+    let messageEl = form.querySelector('.form-message');
+    if (!messageEl) {
+      messageEl = document.createElement('div');
+      messageEl.className = 'form-message';
+      messageEl.style.cssText = `
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      `;
+      form.insertBefore(messageEl, form.firstChild);
+    }
+
+    messageEl.className = `form-message form-message-${type}`;
+    messageEl.textContent = text;
+    messageEl.style.opacity = '1';
+    messageEl.style.visibility = 'visible';
+
+    if (type === 'success') {
+      messageEl.style.backgroundColor = 'rgba(34, 197, 94, 0.15)';
+      messageEl.style.borderLeft = '3px solid #22C55E';
+      messageEl.style.color = '#86EFAC';
+      setTimeout(() => {
+        messageEl.style.opacity = '0';
+        messageEl.style.visibility = 'hidden';
+      }, 3500);
+    } else if (type === 'error') {
+      messageEl.style.backgroundColor = 'rgba(239, 68, 68, 0.15)';
+      messageEl.style.borderLeft = '3px solid #EF4444';
+      messageEl.style.color = '#FCA5A5';
+    }
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    // Validation
+    if (!name) {
+      showMessage('error', 'Please enter your name');
+      nameInput.focus();
+      return;
+    }
+
+    if (!email) {
+      showMessage('error', 'Please enter your email or phone number');
+      emailInput.focus();
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$|^\+?[\d\s\-()]{7,}$/;
+    if (!emailRegex.test(email)) {
+      showMessage('error', 'Please enter a valid email or phone number');
+      emailInput.focus();
+      return;
+    }
+
+    if (!message) {
+      showMessage('error', 'Please enter a message');
+      messageInput.focus();
+      return;
+    }
+
+    if (message.length < 10) {
+      showMessage('error', 'Message should be at least 10 characters');
+      messageInput.focus();
+      return;
+    }
+
+    // Save to localStorage for demo purposes
+    const submission = {
+      name,
+      email,
+      message,
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      let submissions = JSON.parse(localStorage.getItem('portfolioSubmissions') || '[]');
+      submissions.push(submission);
+      localStorage.setItem('portfolioSubmissions', JSON.stringify(submissions));
+    } catch (err) {
+      console.log('localStorage not available');
+    }
+
+    // Show success
+    showMessage('success', '✓ Message received! I\'ll get back to you soon.');
+
+    // Reset form
+    form.reset();
+    nameInput.focus();
+  });
+
+  // Clear error message on input
+  [nameInput, emailInput, messageInput].forEach(input => {
+    input.addEventListener('focus', () => {
+      const errorMsg = form.querySelector('.form-message-error');
+      if (errorMsg) errorMsg.style.opacity = '0';
+    });
+  });
+})();
+
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.magnify').forEach(el => {

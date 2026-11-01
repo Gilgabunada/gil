@@ -3,10 +3,28 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Gil Gabunada - Computer Engineer. Full-stack web development, IoT, smart microgrids, and network security. MERN stack specialist.">
+		<meta name="keywords" content="Computer Engineer, Full-stack Developer, MERN, IoT, Microgrids, Web Development">
+		<meta name="author" content="Guelbert Gabunada Jr.">
+		<meta name="theme-color" content="#131316">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://gilgabunada.github.io/">
+		<meta property="og:title" content="Gil Gabunada - Computer Engineer & Developer">
+		<meta property="og:description" content="Full-stack web developer specializing in MERN stack, IoT projects, and smart microgrids.">
+		<meta property="og:image" content="https://gilgabunada.github.io/images/me1.png">
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="https://gilgabunada.github.io/">
+		<meta name="twitter:title" content="Gil Gabunada - Computer Engineer & Developer">
+		<meta name="twitter:description" content="Full-stack web developer specializing in MERN stack, IoT projects, and smart microgrids.">
+		<meta name="twitter:image" content="https://gilgabunada.github.io/images/me1.png">
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-		<title>Gil Gabunada</title>
+		<title>Gil Gabunada - Computer Engineer & Full-Stack Developer</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +37,7 @@
 
 		<!-- GLOBAL BACKGROUND VIDEO -->
 		<div class="video-bg" aria-hidden="true">
-			<video id="myVideo" autoplay muted loop playsinline>
+			<video id="myVideo" muted loop playsinline preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000000'/%3E%3C/svg%3E">
 			  <source src="./images/bg-video2.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -60,7 +78,7 @@
 			                <li>
 			                	<img id="uc" src="./images/uc.jpg" alt="University of Cebu " class="role-icon">
 			                	<h3>University of Cebu - Main</h3>
-			                	<h2>Computer Engineering Batch 2026</h2>
+			                	<h2>Computer Engineering Graduate - June 2026</h2>
 			                </li>
 			              </ul>
 			            </div>
@@ -75,7 +93,7 @@
 			      <!-- Left Column: Bio Text -->
 			      <div class="col-12 col-lg-3">
 			        <p id="description-me" class="magnify bio-text text-white">
-			          Hi, I'm Gil, a Computer Engineering graduate from the University of Cebu who loves building things that work, both on the screen and in the real world. I started out tinkering with hardware and code, and now I build full-stack web apps with the MERN stack, design REST APIs, and work on smart IoT and microgrid projects. I'm also interested in network security and real-time databases. I like taking a messy technical problem, breaking it down, and turning it into something people actually enjoy using. I'm always learning, and I'm looking for opportunities where I can keep growing while building technology that's useful.
+			          Computer Engineering graduate passionate about building full-stack web apps with MERN, REST APIs, IoT systems, and microgrids. I transform complex technical problems into elegant solutions. Always learning, always shipping.
 			        </p>
 			      </div>
 
@@ -101,87 +119,112 @@
 		<section id="project" class="section page-2 d-flex flex-column justify-content-center align-items-center text-center py-5">
 		  <h1 class="text-white mb-5">My Projects</h1>
 
-		 <div class="container">
-		   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+		 <div class="container-fluid px-4 px-lg-5">
+		   <div class="row g-3">
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/1st.jpg" alt="E-commerce API" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">2nd Sumobot</h3>
-		         <p class="project-text"> </p>
-		       </div>
+		     <!-- CLEARSPEAK Featured - Full on mobile, half on tablet+, quarter on desktop -->
+		     <div class="col-12 col-md-6 col-lg-6">
+		       <a href="./projects/clearspeak.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card project-card-featured h-100 p-3" tabindex="0">
+		           <img src="./images/8th.jpeg" alt="CLEARSPEAK Thesis Project" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">My Thesis Project "CLEARSPEAK"</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/2nd.jpg" alt="Course Booking API" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">Led Controlled by Sound sensor</h3>
-		         <p class="project-text"> </p>
-		       </div>
+		     <!-- Card 2 & 3: Stack on mobile, 2 cols on tablet, quarter on desktop -->
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/sumobot-v2.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/1st.jpg" alt="2nd Sumobot" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">2nd Sumobot</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/3rd.jpg" alt="Course Booking App" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">The making of Analog and Digital Trainer</h3>
-		         <p class="project-text">  </p>
-		       </div>
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/sound-activated-led.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/2nd.jpg" alt="LED Controlled by Sound Sensor" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">Led Controlled by Sound sensor</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/4th.jpg" alt="E-Commerce App" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">1st Sumobot</h3>
-		         <p class="project-text"> </p>
-		       </div>
+		     <!-- Card 4 & 5 & 6: Stack on mobile, 2 cols on tablet, quarter on desktop -->
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/sumobot-v1.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/4th.jpg" alt="1st Sumobot" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">1st Sumobot</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/5th.jpg" alt="Airline Booking Mockup" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">Terminated an Ethernet cable</h3>
-		         <p class="project-text"></p>
-		       </div>
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/electronics-trainer.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/3rd.jpg" alt="Analog and Digital Trainer" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">The making of Analog and Digital Trainer</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/6th.jpg" alt="Airline Booking Prototype" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">Temperature and Humidity Sensor PCB</h3>
-		         <p class="project-text"> </p>
-		       </div>
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/temp-humidity-pcb.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/6th.jpg" alt="Temperature and Humidity Sensor PCB" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">Temperature and Humidity Sensor PCB</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/7th.jpg" alt="Short Courses Capstone" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">Doorbell with bluetooth messaging system</h3>
-		         <p class="project-text"></p>
-		       </div>
+		     <div class="col-12 col-md-6 col-lg-3">
+		       <a href="./projects/smart-bluetooth-doorbell.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/7th.jpg" alt="Doorbell with Bluetooth Messaging" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">Doorbell with bluetooth messaging system</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/8th.jpeg" alt="Short Courses Capstone" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">My Thesis Project "CLEARSPEAK"</h3>
-		         <p class="project-text"></p>
-		       </div>
+		     <!-- Card 7 & 8: Stack on mobile, half on tablet, half on desktop -->
+		     <div class="col-12 col-md-6 col-lg-6">
+		       <a href="./projects/lan-cable-termination.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/5th.jpg" alt="Ethernet Cable Termination" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">Terminated an Ethernet cable</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/9th.jpg" alt="Short Courses Capstone" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">Arduino to RPI 5 that uses Optocoupler</h3>
-		         <p class="project-text"></p>
-		       </div>
+		     <!-- Card 9 & 10: Stack on mobile, half on tablet/desktop -->
+		     <div class="col-12 col-md-6">
+		       <a href="./projects/clearspeak-arduino.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/9th.jpg" alt="Arduino to RPi5 with Optocoupler" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">Arduino to RPI 5 that uses Optocoupler</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
-		     <div class="col">
-		       <div class="project-card h-100 p-3" tabindex="0">
-		         <img src="./images/10th.jpg" alt="Short Courses Capstone" class="img-fluid rounded mb-3 project-img">
-		         <h3 class="text-white h5">4 BIT counter</h3>
-		         <p class="project-text"></p>
-		       </div>
+		     <div class="col-12 col-md-6">
+		       <a href="./projects/4bit-counter-logic.md" class="project-link" style="text-decoration: none; color: inherit;">
+		         <div class="project-card h-100 p-3" tabindex="0">
+		           <img src="./images/10th.jpg" alt="4-BIT Counter" class="img-fluid rounded mb-3 project-img">
+		           <h3 class="text-white h5">4 BIT counter</h3>
+		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         </div>
+		       </a>
 		     </div>
 
 		   </div>
@@ -190,155 +233,172 @@
 
 		
 		<section id="tools" class="section page-3 d-flex flex-column justify-content-center align-items-center text-center py-4">
-		  <h1 class="text-white mb-4 fs-3">Tools &amp; Technologies</h1>
+		  <h1 class="text-white mb-5 fs-3">Tools &amp; Technologies</h1>
 
 		  <div class="container">
-		    <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 g-3">
-		      
-		      <!-- Frontend -->
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">HTML5</h6>
+		    <!-- LANGUAGES -->
+		    <div class="mb-5 text-center">
+		      <h3 class="text-indigo mb-4 fs-5 fw-bold">LANGUAGES</h3>
+		      <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 g-3">
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">JavaScript</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">HTML5</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">CSS3</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Python</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Java</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">C</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">C++</h6>
+		          </div>
 		        </div>
 		      </div>
+		    </div>
 
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">CSS3</h6>
+		    <!-- FRAMEWORKS & LIBRARIES -->
+		    <div class="mb-5 text-center">
+		      <h3 class="text-indigo mb-4 fs-5 fw-bold">FRAMEWORKS &amp; LIBRARIES</h3>
+		      <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 g-3">
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">React</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Bootstrap</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Node.js</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="tool-icon mb-2 invert-icon">
+		            <h6 class="text-white small mb-0 tool-label">Express.js</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">MongoDB</h6>
+		          </div>
 		        </div>
 		      </div>
+		    </div>
 
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">JavaScript</h6>
+		    <!-- TOOLS & PLATFORMS -->
+		    <div class="mb-5 text-center">
+		      <h3 class="text-indigo mb-4 fs-5 fw-bold">TOOLS &amp; PLATFORMS</h3>
+		      <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 g-3">
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Git</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tool-icon mb-2 invert-icon">
+		            <h6 class="text-white small mb-0 tool-label">GitHub</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">VS Code</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Postman</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Arduino</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Raspberry Pi</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.simpleicons.org/ollama/ffffff" alt="Ollama" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Ollama</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Hugging Face</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg" alt="Google Colab" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Google Colab</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Notebook</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.simpleicons.org/roboflow/6706CE" alt="Roboflow" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Roboflow</h6>
+		          </div>
+		        </div>
+		        <div class="col">
+		          <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+		            <img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude Code" class="tool-icon mb-2">
+		            <h6 class="text-white small mb-0 tool-label">Claude Code</h6>
+		          </div>
 		        </div>
 		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Bootstrap</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">React</h6>
-		        </div>
-		      </div>
-
-		      <!-- Backend & Databases -->
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Node.js</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tool-icon mb-2 invert-icon">
-		          <h6 class="text-white small mb-0 tool-label">Express.js</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">MongoDB</h6>
-		        </div>
-		      </div>
-
-		      <!-- Tools & Others -->
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Git</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Postman</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">VS Code</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tool-icon mb-2 invert-icon">
-		          <h6 class="text-white small mb-0 tool-label">GitHub</h6>
-		        </div>
-		      </div>
-
-		      <!-- AI, Data & Hardware -->
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Arduino</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Raspberry Pi</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.simpleicons.org/ollama/ffffff" alt="Ollama" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Ollama</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Hugging Face</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg" alt="Google Colab" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Google Colab</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Notebook</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.simpleicons.org/roboflow/6706CE" alt="Roboflow" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Roboflow</h6>
-		        </div>
-		      </div>
-
-		      <div class="col">
-		        <div class="tool-card p-3 h-100 d-flex flex-column align-items-center justify-content-center">
-		          <img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude Code" class="tool-icon mb-2">
-		          <h6 class="text-white small mb-0 tool-label">Claude Code</h6>
-		        </div>
-		      </div>
-
 		    </div>
 		  </div>
 		</section>
@@ -371,17 +431,17 @@
 		          <div class="contact-row d-flex align-items-center gap-2">
 		            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/geo-alt.svg" alt="Address" width="18" height="18" class="invert-icon flex-shrink-0">
 		            <div>
-		              <span class="card-label text-uppercase d-block fw-bold small">STUDIO ADDRESS</span>
-		              <p class="contact-value mb-0 fw-semibold text-white small">450 Mission St, San Francisco, CA 94105</p>
+		              <span class="card-label text-uppercase d-block fw-bold small">LOCATION</span>
+		              <p class="contact-value mb-0 fw-semibold text-white small">Cebu, Philippines</p>
 		            </div>
 		          </div>
 
-		          <!-- Remote Base -->
+		          <!-- Timezone -->
 		          <div class="contact-row d-flex align-items-center gap-2">
-		            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/globe.svg" alt="Remote Base" width="18" height="18" class="invert-icon flex-shrink-0">
+		            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/globe.svg" alt="Timezone" width="18" height="18" class="invert-icon flex-shrink-0">
 		            <div>
-		              <span class="card-label text-uppercase d-block fw-bold small">REMOTE BASE</span>
-		              <p class="contact-value mb-0 fw-semibold text-white small">Available Worldwide (PST / UTC-8 timezone)</p>
+		              <span class="card-label text-uppercase d-block fw-bold small">TIMEZONE</span>
+		              <p class="contact-value mb-0 fw-semibold text-white small">PHT / UTC+8</p>
 		            </div>
 		          </div>
 
@@ -393,7 +453,7 @@
 		          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
 		            
 		           <!-- Gmail -->
-		           <a href="mailto:your.email@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn d-flex align-items-center justify-content-center" title="Gmail">
+		           <a href="mailto:gabunada.guelbert@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn d-flex align-items-center justify-content-center" title="Gmail">
 		             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
 		               <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L24 5.457z"/>
 		               <path fill="#34A853" d="M0 19.366c0 .904.732 1.636 1.636 1.636h3.819V11.73L0 5.457v13.909z"/>
