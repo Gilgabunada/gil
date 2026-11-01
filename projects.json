@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "title": "My Thesis Project \"CLEARSPEAK\"",
+    "image": "./images/8th.jpeg",
+    "shortDesc": "AI-powered speech recognition for people with cleft lip and palate",
+    "fullDescription": "CLEARSPEAK is an AI-powered speech recognition system designed to transcribe and assist people with cleft lip and palate (CLP) speech impediments. Built as a portable, offline-capable device, it runs on Raspberry Pi with Arduino integration for GPIO control.",
+    "overview": "CLEARSPEAK leverages advanced AI to transcribe speech in real-time, improving communication accessibility and confidence. The system is fully offline, requires no internet connectivity, and operates as a portable lapel-style wearable.",
+    "features": [
+      "Offline Speech Recognition using OpenAI's Whisper base model",
+      "Real-time Transcription with low-latency processing",
+      "Multi-Voice Selection with 3 different voice options",
+      "Portable & Rechargeable battery-powered design",
+      "HDMI Display Support for flexible output options",
+      "Hardware Integration with Raspberry Pi + Arduino",
+      "Zero Internet Dependency for complete privacy"
+    ],
+    "technologies": ["Python", "OpenAI Whisper", "Raspberry Pi", "Arduino", "PyAudio"],
+    "year": 2026,
+    "achievement": "🏆 Thesis Champion — College of Engineering Thesis Competition (2026)",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "2nd Sumobot",
+    "image": "./images/1st.jpg",
+    "shortDesc": "Competitive sumo robot with 6 motors and advanced sensor integration",
+    "fullDescription": "Sumobot V2 is the second-generation competitive sumo robot designed for university-level competitions. This autonomous robot competes against other university teams with enhanced capabilities from the first generation.",
+    "overview": "Building on lessons learned from V1, this improved version features 6 low-gear motors for maximum pushing power and intelligent multi-sensor navigation.",
+    "features": [
+      "6 Low-Gear Motors for high torque capability",
+      "3 Ultrasonic Sensors for opponent and boundary detection",
+      "IR Sensors for dohyo ring boundary detection via ground reflection",
+      "Ring Boundary Detection to keep robot inside competition ring",
+      "Autonomous Navigation with sensor-driven decision making",
+      "Compact Design optimized for agility"
+    ],
+    "technologies": ["C/C++", "Arduino", "Ultrasonic Sensors", "IR Sensors", "Motor Drivers"],
+    "year": 2026,
+    "status": "Active (Ongoing Competitions)",
+    "type": "Personal Project"
+  },
+  {
+    "id": 3,
+    "title": "Led Controlled by Sound sensor",
+    "image": "./images/2nd.jpg",
+    "shortDesc": "Sound-reactive LED system that responds to clapping patterns",
+    "fullDescription": "A sound-reactive LED control system that uses a microphone to detect clapping patterns. This Arduino-based project demonstrates audio input processing and real-time LED control through pattern recognition.",
+    "overview": "Simple yet elegant project showcasing sensor integration and embedded systems control during second year of college.",
+    "features": [
+      "Clap Detection via microphone-based sound trigger",
+      "Pattern Recognition: 1 clap → Red LED, 2 claps → Blue LED",
+      "Multiple claps trigger RGB LED blinking sequence",
+      "Real-time Response with immediate feedback",
+      "RGB Control for full color support"
+    ],
+    "technologies": ["C/C++", "Arduino", "Microphone Sensor", "LEDs", "Signal Processing"],
+    "year": 2025,
+    "status": "Completed (School Project)",
+    "type": "Midterm Assignment"
+  },
+  {
+    "id": 4,
+    "title": "1st Sumobot",
+    "image": "./images/4th.jpg",
+    "shortDesc": "First-generation autonomous sumo robot for university competitions",
+    "fullDescription": "The original sumobot project developed during 2nd year of college. This was the first autonomous sumo robot, built to compete against senior students. Despite initial challenges, it demonstrated early autonomous robotics capabilities.",
+    "overview": "A significant learning experience tackling the complexities of multi-sensor integration and autonomous motor control for the first time.",
+    "features": [
+      "Fully Autonomous operation with AI-driven decision making",
+      "Multi-Sensor Integration for coordinated sensing",
+      "Ultrasonic Sensors for opponent detection",
+      "IR Sensors for dohyo boundary detection",
+      "Ring Boundary Detection via ground reflection sensing",
+      "Motor Control System for autonomous advantage"
+    ],
+    "technologies": ["C/C++", "Arduino", "Ultrasonic Sensors", "IR Sensors", "Motor Drivers"],
+    "year": 2025,
+    "status": "Completed (First Generation)",
+    "type": "Personal Project"
+  },
+  {
+    "id": 5,
+    "title": "The making of Analog and Digital Trainer",
+    "image": "./images/3rd.jpg",
+    "shortDesc": "Comprehensive electronics training platform for logic and analog circuits",
+    "fullDescription": "A multi-functional trainer platform designed for learning and testing electronic logic circuits. This educational device enables hands-on exploration of digital logic gates, IC testing, analog circuits, and signal generation.",
+    "overview": "Perfect for students and enthusiasts to understand and test various electronic components in a controlled, hands-on environment.",
+    "features": [
+      "Digital Logic Testing for various gate types",
+      "Arduino Integration for effective IC validation",
+      "8-Channel Pull-Down Switches for manual input control",
+      "8-Channel Output Display for real-time IC state feedback",
+      "PWM Module for signal generation testing",
+      "Variable Voltage Regulator (0-12V)",
+      "Fixed Voltage Outputs (3V, 5V, 9V, 12V)",
+      "Integrated Speaker for audio signal testing"
+    ],
+    "technologies": ["C/C++", "Arduino", "Logic Gate ICs", "PWM", "Voltage Regulation"],
+    "year": 2026,
+    "status": "Completed (Personal Learning Tool)",
+    "type": "Personal Project"
+  },
+  {
+    "id": 6,
+    "title": "Temperature and Humidity Sensor PCB",
+    "image": "./images/6th.jpg",
+    "shortDesc": "Custom-designed PCB using toner transfer and chemical etching",
+    "fullDescription": "A custom-designed printed circuit board for temperature and humidity sensing. This was the first PCB designed and fabricated from scratch, demonstrating hands-on experience with circuit design, PCB manufacturing, and soldering.",
+    "overview": "Showcases the complete PCB development workflow from design to working prototype using DIY fabrication techniques.",
+    "features": [
+      "Temperature Sensing for accurate measurements",
+      "Humidity Sensing for real-time detection",
+      "Custom PCB Design optimized for compact form",
+      "DIY Fabrication using toner transfer and chemical etching",
+      "Professional EasyEDA circuit design",
+      "Efficient trace routing"
+    ],
+    "technologies": ["EasyEDA", "PCB Design", "Soldering", "Chemical Etching", "DHT22/BME280"],
+    "year": 2026,
+    "status": "Completed (First Custom PCB)",
+    "achievement": "Successful design, fabrication, and assembly from scratch"
+  },
+  {
+    "id": 7,
+    "title": "Doorbell with bluetooth messaging system",
+    "image": "./images/7th.jpg",
+    "shortDesc": "Smart Bluetooth doorbell with mobile app control and status messaging",
+    "fullDescription": "An intelligent doorbell system that connects via Bluetooth to a homeowner's smartphone. This IoT device enables remote doorbell management and visitor notifications.",
+    "overview": "Modernizes traditional doorbell functionality by adding remote control and smart notifications, giving homeowners flexibility in managing visitor access.",
+    "features": [
+      "Bluetooth Connectivity to smartphone",
+      "Remote Control via mobile phone app",
+      "Availability Status modes (Nobody Home, Do Not Disturb, Active)",
+      "Real-Time Notifications to smartphone",
+      "Visitor Awareness with customizable messages",
+      "Portable Control from anywhere"
+    ],
+    "technologies": ["C/C++", "Arduino", "Bluetooth HC-05", "Mobile App Development", "Push Notifications"],
+    "year": 2026,
+    "status": "In Development",
+    "type": "IoT & Smart Home"
+  },
+  {
+    "id": 8,
+    "title": "Terminated an Ethernet cable",
+    "image": "./images/5th.jpg",
+    "shortDesc": "Proper LAN cable termination with RJ45 connectors",
+    "fullDescription": "A practical networking project from the Cisco curriculum focused on proper Ethernet cable termination techniques. This foundational skill demonstrates understanding of network infrastructure standards.",
+    "overview": "Master proper LAN cable preparation, stripping, and RJ45 connector termination according to industry standards (EIA/TIA 568A and 568B).",
+    "features": [
+      "Cable Preparation and wire organization",
+      "Wire Sequencing following EIA/TIA standards",
+      "RJ45 Crimping with proper pressure",
+      "Connector Standards (568A vs 568B)",
+      "Cable Testing for verification",
+      "Quality Control methodology"
+    ],
+    "technologies": ["Network Infrastructure", "RJ45 Crimping", "Ethernet Standards", "Cable Testing"],
+    "year": 2026,
+    "status": "Completed (Course Project)",
+    "type": "Cisco Networking Course"
+  },
+  {
+    "id": 9,
+    "title": "Arduino to RPI 5 that uses Optocoupler",
+    "image": "./images/9th.jpg",
+    "shortDesc": "CLEARSPEAK Arduino controller with optocoupler isolation and battery monitoring",
+    "fullDescription": "The dedicated Arduino subsystem for CLEARSPEAK thesis project. This microcontroller handles critical hardware control, battery monitoring, and safe communication with Raspberry Pi through optocoupler isolation.",
+    "overview": "Serves as the bridge between physical hardware and main processing unit while protecting the Raspberry Pi from electrical surges.",
+    "features": [
+      "Optocoupler Isolation for surge protection",
+      "Button Control for user input",
+      "Battery Voltage Monitoring",
+      "Shutdown Prevention before complete battery drain",
+      "Sensor Interface for voltage reading",
+      "Power Management for graceful shutdown",
+      "Real-time Communication via isolated serial"
+    ],
+    "technologies": ["C/C++", "Arduino", "Optocoupler", "ADC", "Serial Communication"],
+    "year": 2026,
+    "status": "Completed (Thesis Component)",
+    "type": "Hardware Control Module"
+  },
+  {
+    "id": 10,
+    "title": "4 BIT counter",
+    "image": "./images/10th.jpg",
+    "shortDesc": "Digital logic circuit displaying ID number using 4-bit counter and logic gates",
+    "fullDescription": "A digital logic circuit project that displays a student ID number and first initial using a 4-bit counter system. Demonstrates practical application of logic gates and timing circuits.",
+    "overview": "Showcases understanding of combinational logic, sequential circuits, and real-world application of TTL integrated circuits.",
+    "features": [
+      "4-Bit Counter using logic gate ICs",
+      "Truth Table Logic for display design",
+      "NE555 Timer for clock signal generation",
+      "Logic Gate ICs for output decoding",
+      "Automatic Cycling with continuous loop",
+      "LED Display for binary output"
+    ],
+    "technologies": ["Logic Gates", "7493 Counter IC", "NE555 Timer", "TTL ICs", "Digital Design"],
+    "year": 2026,
+    "status": "Completed (School Project)",
+    "type": "Digital Logic Course"
+  }
+]

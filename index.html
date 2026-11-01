@@ -32,6 +32,9 @@
 
 		<link rel="stylesheet" type="text/css" href="./index.css">
 
+		<!-- Vue.js 3 CDN -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 	</head>
 	<body>
 
@@ -116,117 +119,62 @@
 			</section>
 			<!-- ABOUT ME SECTION ENDS HERE -->
 
-		<section id="project" class="section page-2 d-flex flex-column justify-content-center align-items-center text-center py-5">
+		<section id="projectApp" class="section page-2 d-flex flex-column justify-content-center align-items-center text-center py-5">
 		  <h1 class="text-white mb-5">My Projects</h1>
 
 		 <div class="container-fluid px-4 px-lg-5">
 		   <div class="row g-3">
-
-		     <!-- CLEARSPEAK Featured - Full on mobile, half on tablet+, quarter on desktop -->
-		     <div class="col-12 col-md-6 col-lg-6">
-		       <a href="./projects/clearspeak.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card project-card-featured h-100 p-3" tabindex="0">
-		           <img src="./images/8th.jpeg" alt="CLEARSPEAK Thesis Project" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">My Thesis Project "CLEARSPEAK"</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
+		     <div v-for="(project, index) in projects" :key="project.id" :class="getCardClasses(index)">
+		       <div class="project-card" :class="{ 'project-card-featured': index === 0 }" @click="openProject(project)" style="cursor: pointer;">
+		         <img :src="project.image" :alt="project.title" class="img-fluid rounded mb-3 project-img">
+		         <h3 class="text-white h5">{{ project.title }}</h3>
+		         <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		       </div>
 		     </div>
+		   </div>
+		 </div>
 
-		     <!-- Card 2 & 3: Stack on mobile, 2 cols on tablet, quarter on desktop -->
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/sumobot-v2.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/1st.jpg" alt="2nd Sumobot" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">2nd Sumobot</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		 <!-- Project Details Modal -->
+		 <div v-if="selectedProject" class="project-modal-overlay" @click.self="closeProject">
+		   <div class="project-modal">
+		     <button class="modal-close-btn" @click="closeProject">×</button>
+
+		     <div class="modal-content">
+		       <img :src="selectedProject.image" :alt="selectedProject.title" class="modal-image">
+
+		       <div class="modal-details">
+		         <h2 class="text-white mb-3">{{ selectedProject.title }}</h2>
+
+		         <p class="text-muted mb-4">{{ selectedProject.shortDesc }}</p>
+
+		         <div class="mb-4">
+		           <h4 class="text-indigo mb-3">Overview</h4>
+		           <p class="text-white">{{ selectedProject.overview }}</p>
 		         </div>
-		       </a>
-		     </div>
 
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/sound-activated-led.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/2nd.jpg" alt="LED Controlled by Sound Sensor" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">Led Controlled by Sound sensor</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         <div class="mb-4">
+		           <h4 class="text-indigo mb-3">Key Features</h4>
+		           <ul class="features-list">
+		             <li v-for="(feature, i) in selectedProject.features" :key="i" class="text-white mb-2">
+		               {{ feature }}
+		             </li>
+		           </ul>
 		         </div>
-		       </a>
-		     </div>
 
-		     <!-- Card 4 & 5 & 6: Stack on mobile, 2 cols on tablet, quarter on desktop -->
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/sumobot-v1.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/4th.jpg" alt="1st Sumobot" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">1st Sumobot</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         <div class="mb-4">
+		           <h4 class="text-indigo mb-3">Technologies</h4>
+		           <div class="tech-tags">
+		             <span v-for="tech in selectedProject.technologies" :key="tech" class="tech-badge">{{ tech }}</span>
+		           </div>
 		         </div>
-		       </a>
-		     </div>
 
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/electronics-trainer.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/3rd.jpg" alt="Analog and Digital Trainer" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">The making of Analog and Digital Trainer</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
+		         <div class="modal-footer">
+		           <p class="text-muted mb-2"><strong>Year:</strong> {{ selectedProject.year }}</p>
+		           <p class="text-muted mb-2"><strong>Status:</strong> {{ selectedProject.status }}</p>
+		           <p v-if="selectedProject.achievement" class="text-warning">{{ selectedProject.achievement }}</p>
 		         </div>
-		       </a>
+		       </div>
 		     </div>
-
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/temp-humidity-pcb.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/6th.jpg" alt="Temperature and Humidity Sensor PCB" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">Temperature and Humidity Sensor PCB</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
-		     </div>
-
-		     <div class="col-12 col-md-6 col-lg-3">
-		       <a href="./projects/smart-bluetooth-doorbell.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/7th.jpg" alt="Doorbell with Bluetooth Messaging" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">Doorbell with bluetooth messaging system</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
-		     </div>
-
-		     <!-- Card 7 & 8: Stack on mobile, half on tablet, half on desktop -->
-		     <div class="col-12 col-md-6 col-lg-6">
-		       <a href="./projects/lan-cable-termination.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/5th.jpg" alt="Ethernet Cable Termination" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">Terminated an Ethernet cable</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
-		     </div>
-
-		     <!-- Card 9 & 10: Stack on mobile, half on tablet/desktop -->
-		     <div class="col-12 col-md-6">
-		       <a href="./projects/clearspeak-arduino.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/9th.jpg" alt="Arduino to RPi5 with Optocoupler" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">Arduino to RPI 5 that uses Optocoupler</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
-		     </div>
-
-		     <div class="col-12 col-md-6">
-		       <a href="./projects/4bit-counter-logic.md" class="project-link" style="text-decoration: none; color: inherit;">
-		         <div class="project-card h-100 p-3" tabindex="0">
-		           <img src="./images/10th.jpg" alt="4-BIT Counter" class="img-fluid rounded mb-3 project-img">
-		           <h3 class="text-white h5">4 BIT counter</h3>
-		           <p class="project-text"><span class="tech-badge">View Details →</span></p>
-		         </div>
-		       </a>
-		     </div>
-
 		   </div>
 		 </div>
 		</section>

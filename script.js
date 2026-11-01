@@ -317,3 +317,63 @@ document.addEventListener('DOMContentLoaded', () => {
   video.addEventListener('loadedmetadata', apply);
   video.addEventListener('play', apply);
 })();
+// ===== VUE.JS PROJECT MODAL =====
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      projects: [],
+      selectedProject: null
+    };
+  },
+  methods: {
+    async loadProjects() {
+      try {
+        const response = await fetch('./projects.json');
+        this.projects = await response.json();
+      } catch (error) {
+        console.error('Error loading projects:', error);
+      }
+    },
+    openProject(project) {
+      this.selectedProject = project;
+      document.body.style.overflow = 'hidden';
+    },
+    closeProject() {
+      this.selectedProject = null;
+      document.body.style.overflow = 'auto';
+    },
+    getCardClasses(index) {
+      const classes = ['col-12'];
+      
+      // First card (CLEARSPEAK) - featured
+      if (index === 0) {
+        return [...classes, 'col-md-6', 'col-lg-6'];
+      }
+      
+      // Cards 2-7 (mid-sized cards)
+      if (index >= 1 && index <= 6) {
+        return [...classes, 'col-md-6', 'col-lg-3'];
+      }
+      
+      // Card 8 (wide)
+      if (index === 7) {
+        return [...classes, 'col-md-6', 'col-lg-6'];
+      }
+      
+      // Cards 9-10 (half width)
+      return [...classes, 'col-md-6'];
+    }
+  },
+  mounted() {
+    this.loadProjects();
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        this.closeProject();
+      }
+    });
+  }
+}).mount('#projectApp');
